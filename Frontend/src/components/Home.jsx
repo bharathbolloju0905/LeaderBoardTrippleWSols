@@ -37,7 +37,7 @@ const Home = () => {
     };
 
     return (
-        <div className="w-full min-h-screen flex flex-col items-center bg-gradient-to-b from-gray-50 to-gray-100 p-6 relative">
+        <div className="w-full h-screen  flex flex-col items-center bg-gradient-to-b from-gray-50 to-gray-100 p-6 relative">
 
             <div className="bg-white w-full max-w-2xl p-6 rounded-2xl shadow-md mb-6 text-center">
                 <h1 className="text-3xl font-bold mb-2">🏆 Leaderboard</h1>
@@ -45,7 +45,7 @@ const Home = () => {
             </div>
 
 
-            <div className="w-full max-w-2xl flex flex-col space-y-3">
+            <div className="w-full max-w-2xl flex flex-col space-y-3 h-[80%] overflow-y-auto pt-2 hide-scroll pb-2">
                 {loading ? (
                     <p className="text-center">Loading...</p>
                 ) : (

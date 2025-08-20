@@ -12,7 +12,15 @@ const UserProfile = ({ isOpen, setisOpen,user,fetchData,rank }) => {
         method: 'GET',
       });
       const data = await claim.json();
+      const history = await fetch(`${import.meta.env.VITE_BASE_URL}/api/users/${user._id}/history`,{
+        method:"POST",
+        headers:{
+          'Content-Type':'application/json',
+        }
+      });
+      const historyData = await history.json();
       console.log('Claim response:', data);
+      console.log('History response:', historyData);
       fetchData();
       setisOpen(false);
     } catch (error) {

@@ -39,8 +39,7 @@ module.exports.claimForUser = async (req, res) => {
         if (!user) {
             return res.status(404).json({ message: 'User not found' });
         }
-       user.points +=   Math.random() * 10; // Random points between 0 and 10
-        await user.save();
+      user.points += Math.floor(Math.random() * 10) + 1;
 
         res.status(200).json({ message: 'Points claimed successfully', points: user.points });
     } catch (error) {

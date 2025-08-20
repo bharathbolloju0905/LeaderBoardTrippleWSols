@@ -11,7 +11,7 @@ router.post('/:userId/history', userController.createHistory);
 
 router.get("/history",userController.getHistory);
 
-router.get('/:userId/history', userController.getHistoryForUser);
+router.get('/:userId/allhistory', userController.getHistoryForUser);
 
 module.exports = router;
 
